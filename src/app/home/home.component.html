@@ -1,0 +1,9 @@
+<h1>List of Videos</h1>
+<ul *ngFor="let jsonData of data">
+  <li>
+    <app-videolist [title]="jsonData.snippet.title" [thumbnail]="jsonData.snippet.thumbnails"
+                   [videoId]="jsonData.id.videoId"></app-videolist>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
